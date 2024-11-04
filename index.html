@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频播放界面</title>
+    <style>
+        /* 设置页面样式 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button" onclick="playAudio('audio1.mp3')">播放音频 1</button>
+        <button class="button" onclick="playAudio('audio2.mp3')">播放音频 2</button>
+        <button class="button" onclick="playAudio('audio3.mp3')">播放音频 3</button>
+    </div>
+
+    <!-- 添加音频文件 -->
+    <audio id="audioPlayer" src=""></audio>
+
+    <script>
+        function playAudio(src) {
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = src;
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
