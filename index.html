@@ -10,11 +10,12 @@
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
+            flex-wrap: wrap;
         }
         .button-container {
             display: grid;
             grid-template-columns: repeat(3, auto);
-            gap: 10px;
+            gap: 20px;
         }
         .button {
             padding: 10px 20px;
@@ -24,18 +25,30 @@
     </style>
 </head>
 <body>
-    <div class="button-container" id="buttonContainer"></div>
-    <audio id="audioPlayer"></audio>
-
+    <div class="button-container">
+        <button class="button" onclick="playAudio('audio1.mp3')">播放音频 1</button>
+        <button class="button" onclick="playAudio('audio2.mp3')">播放音频 2</button>
+        <button class="button" onclick="playAudio('audio3.mp3')">播放音频 3</button>
+        <button class="button" onclick="playAudio('audio4.mp3')">播放音频 4</button>
+        <button class="button" onclick="playAudio('audio5.mp3')">播放音频 5</button>
+        <button class="button" onclick="playAudio('audio6.mp3')">播放音频 6</button>
+        <button class="button" onclick="playAudio('audio7.mp3')">播放音频 7</button>
+        <button class="button" onclick="playAudio('audio8.mp3')">播放音频 8</button>
+        <button class="button" onclick="playAudio('audio9.mp3')">播放音频 9</button>
+        <button class="button" onclick="playAudio('audio10.mp3')">播放音频 10</button>
+        <button class="button" onclick="playAudio('audio11.mp3')">播放音频 11</button>
+        <button class="button" onclick="playAudio('audio12.mp3')">播放音频 12</button>
+        <button class="button" onclick="playAudio('audio13.mp3')">播放音频 13</button>
+        <button class="button" onclick="playAudio('audio14.mp3')">播放音频 14</button>
+        <button class="button" onclick="playAudio('audio15.mp3')">播放音频 15</button>
+        <button class="button" onclick="playAudio('audio16.mp3')">播放音频 16</button>
+        <button class="button" onclick="playAudio('audio17.mp3')">播放音频 17</button>
+        <button class="button" onclick="playAudio('audio18.mp3')">播放音频 18</button>
+        <button class="button" onclick="playAudio('audio19.mp3')">播放音频 19</button>
+        <button class="button" onclick="playAudio('audio20.mp3')">播放音频 20</button>
+        <audio id="audioPlayer"></audio>
+    </div>
     <script>
-        const buttonContainer = document.getElementById('buttonContainer');
-        for (let i = 1; i <= 30; i++) {
-            const button = document.createElement('button');
-            button.className = 'button';
-            button.textContent = `播放音频 ${i}`;
-            button.onclick = () => playAudio(`audio${i}.mp3`);
-            buttonContainer.appendChild(button);
-        }
         function playAudio(src) {
             const audioPlayer = document.getElementById('audioPlayer');
             audioPlayer.src = src;
@@ -44,4 +57,5 @@
     </script>
 </body>
 </html>
+
 
