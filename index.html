@@ -10,27 +10,18 @@
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            flex-direction: column;
             margin-top: 60px; /* 控制整体下移 */
         }
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .title-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 每列等宽 */
-            gap: 90px; /* 控制标题间距 */
-            margin-bottom: 30px; /* 标题和按钮之间的间距 */
-            font-weight: bold;
+            grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+            gap: 90px; /* 控制列间距 */
             text-align: center;
-            font-size: 24px; /* 增大标题字体 */
         }
-        .button-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 每列等宽 */
-            gap: 20px 90px; /* 控制行间距和列间距 */
+        .title {
+            font-weight: bold;
+            font-size: 24px; /* 增大标题字体 */
+            margin-bottom: 20px;
         }
         .button {
             width: 40px; /* 按钮大小 */
@@ -44,7 +35,7 @@
             cursor: pointer;
             font-size: 20px; /* 图标大小 */
             color: #007bff; /* 蓝色图标 */
-            margin: 0 auto; /* 居中对齐按钮 */
+            margin: 10px auto; /* 每个按钮之间的间距 */
         }
     </style>
 </head>
