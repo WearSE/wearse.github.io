@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WearSE audio demo</title>
+    <title>音频播放</title>
     <style>
         body {
             display: flex;
@@ -10,10 +10,15 @@
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            flex-wrap: wrap;
-            margin-top: 100px; /* 向下移动 */
+            flex-direction: column;
+            margin-top: 20px; /* 控制整体下移 */
         }
-         .title-container {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title-container {
             display: grid;
             grid-template-columns: repeat(3, auto);
             gap: 40px;
@@ -24,10 +29,10 @@
         .button-container {
             display: grid;
             grid-template-columns: repeat(3, auto);
-            gap:  20px 80px; /* 增大列间距 */
+            gap: 20px 40px; /* 控制行间距和列间距 */
         }
         .button {
-            width: 40px; /* 缩小按钮 */
+            width: 40px; /* 按钮大小 */
             height: 40px;
             background-color: #f0f0f0;
             border: 1px solid #ccc;
@@ -36,7 +41,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 20px; /* 缩小图标大小 */
+            font-size: 20px; /* 图标大小 */
             color: #007bff; /* 蓝色图标 */
         }
     </style>
