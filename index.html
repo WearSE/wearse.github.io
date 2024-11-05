@@ -20,15 +20,16 @@
         }
         .title-container {
             display: grid;
-            grid-template-columns: repeat(3, auto);
-            gap: 40px;
+            grid-template-columns: repeat(3, 1fr); /* 每列等宽 */
+            gap: 90px; /* 控制标题间距 */
             margin-bottom: 30px; /* 标题和按钮之间的间距 */
             font-weight: bold;
             text-align: center;
+            font-size: 24px; /* 增大标题字体 */
         }
         .button-container {
             display: grid;
-            grid-template-columns: repeat(3, auto);
+            grid-template-columns: repeat(3, 1fr); /* 每列等宽 */
             gap: 20px 90px; /* 控制行间距和列间距 */
         }
         .button {
@@ -43,6 +44,7 @@
             cursor: pointer;
             font-size: 20px; /* 图标大小 */
             color: #007bff; /* 蓝色图标 */
+            margin: 0 auto; /* 居中对齐按钮 */
         }
     </style>
 </head>
