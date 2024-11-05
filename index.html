@@ -13,6 +13,14 @@
             flex-wrap: wrap;
             margin-top: 100px; /* 向下移动 */
         }
+         .title-container {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 40px;
+            margin-bottom: 10px; /* 标题和按钮之间的间距 */
+            font-weight: bold;
+            text-align: center;
+        }
         .button-container {
             display: grid;
             grid-template-columns: repeat(3, auto);
@@ -34,6 +42,11 @@
     </style>
 </head>
 <body>
+    <div class="title-container">
+        <div>Groud Truth</div>
+        <div>Noise</div>
+        <div>WearSE(ours)</div>
+    </div>
     <div class="button-container">
         <button class="button" onclick="playAudio('audio1.mp3')">▶️</button>
         <button class="button" onclick="playAudio('audio2.mp3')">▶️</button>
@@ -56,6 +69,15 @@
         <button class="button" onclick="playAudio('audio19.mp3')">▶️</button>
         <button class="button" onclick="playAudio('audio20.mp3')">▶️</button>
         <button class="button" onclick="playAudio('audio21.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio22.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio23.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio24.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio25.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio26.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio27.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio28.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio29.mp3')">▶️</button>
+        <button class="button" onclick="playAudio('audio30.mp3')">▶️</button>
         <audio id="audioPlayer"></audio>
     </div>
     <script>
