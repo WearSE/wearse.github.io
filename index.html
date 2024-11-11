@@ -27,30 +27,31 @@
             text-align: center;
             font-size: 24px; /* 增大标题字体 */
         }
-        .audio-container {
+        .button-container {
             display: grid;
             grid-template-columns: repeat(3, auto);
             gap: 20px 94px; /* 控制行间距和列间距 */
-            align-items: center;
         }
-        .audio-player {
+        .button {
+            width: 40px; /* 按钮大小 */
+            height: 40px;
             background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 25px;
-            width: 250px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        audio {
-            width: 100%;
-            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px; /* 图标大小 */
+            color: #007bff; /* 蓝色图标 */
         }
     </style>
 </head>
 <body>
     <div class="title-container">
-        <div>Ground Truth</div>
+        <div>Groud Truth</div>
         <div>Noise</div>
-        <div>WearSE (ours)</div>
+        <div>WearSE(ours)</div>
     </div>
     <div class="audio-container">
         <div class="audio-player">
@@ -71,9 +72,89 @@
                 Your browser does not support the audio element.
             </audio>
         </div>
-        <!-- 添加更多音频播放器，每个音频文件对应一个播放器 -->
+         <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/GroundTruth/2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
     </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/noise/2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/WearSE/2.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/GroundTruth/3.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/noise/3.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/WearSE/3.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/GroundTruth/4.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/noise/4.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/WearSE/4.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Repeat this structure for the remaining audio files up to 10 -->
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/GroundTruth/10.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/noise/10.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="audio-player">
+        <audio controls>
+            <source src="https://your-username.github.io/your-repo/audio/WearSE/10.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    </div>
+    <script>
+        function playAudio(src) {
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = src;
+            audioPlayer.play();
+        }
+    </script>
 </body>
 </html>
-
-
