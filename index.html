@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>音频播放</title>
     <style>
-        body {
+       body {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,31 +20,31 @@
         }
         .title-container {
             display: grid;
-            grid-template-columns: repeat(3, auto);
+            grid-template-columns: repeat(3, 1fr); /* 三列布局 */
             gap: 40px;
-            margin-bottom: 30px; /* 标题和按钮之间的间距 */
+            margin-bottom: 30px;
             font-weight: bold;
             text-align: center;
-            font-size: 24px; /* 增大标题字体 */
+            font-size: 24px;
         }
-        .button-container {
+        .audio-container {
             display: grid;
-            grid-template-columns: repeat(3, auto);
-            gap: 20px 94px; /* 控制行间距和列间距 */
-        }
-        .button {
-            width: 40px; /* 按钮大小 */
-            height: 40px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            display: flex;
+            grid-template-columns: repeat(3, 1fr); /* 每行三个播放器 */
+            gap: 20px 40px; /* 控制行间距和列间距 */
             align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 20px; /* 图标大小 */
-            color: #007bff; /* 蓝色图标 */
         }
+        .audio-player {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 25px;
+            width: 250px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        audio {
+            width: 100%;
+            outline: none;
+        }
+        
     </style>
 </head>
 <body>
