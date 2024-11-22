@@ -8,19 +8,34 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             font-family: Arial, sans-serif;
-            flex-direction: column;
-            margin-top: 75px; /* 控制整体下移 */
+            margin: 0;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
+        }
+        .video-container {
+            width: 1280px;
+            height: 720px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
         .title-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+            grid-template-columns: repeat(3, 1fr);
             gap: 160px;
             margin-bottom: 30px;
             font-weight: bold;
@@ -29,8 +44,8 @@
         }
         .audio-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 每行三个播放器 */
-            gap: 20px 40px; /* 控制行间距和列间距 */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px 40px;
             align-items: center;
         }
         .audio-player {
@@ -44,203 +59,47 @@
             width: 100%;
             outline: none;
         }
-        
     </style>
 </head>
 <body>
-    <div class="title-container">
-        <div>Groud Truth</div>
-        <div>Noise</div>
-        <div>WearSE(ours)</div>
-    </div>
-    <div class="audio-container">
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/1.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
+    <div class="container">
+        <!-- Video Section -->
+        <div class="video-container">
+            <video controls>
+                <source src="audio/demo_2.0.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/1.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
+        
+        <!-- Titles Section -->
+        <div class="title-container">
+            <div>Ground Truth</div>
+            <div>Noise</div>
+            <div>WearSE (ours)</div>
         </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/1.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/2.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/2.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/2.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/3.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/3.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/3.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/4.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/4.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/4.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/5.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/5.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/5.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-        <audio controls>
-            <source src="audio/GroundTruth/6.wav" type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/6.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/6.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/7.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/7.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/7.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/8.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/8.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/8.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/9.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/9.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/9.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div> 
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/10.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/noise/10.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/WearSE/10.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
+        
+        <!-- Audio Section -->
+        <div class="audio-container">
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/GroundTruth/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/noise/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/WearSE/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!-- Add additional audio elements as needed -->
         </div>
     </div>
-    <script>
-        function playAudio(src) {
-            const audioPlayer = document.getElementById('audioPlayer');
-            audioPlayer.src = src;
-            audioPlayer.play();
-        }
-    </script>
 </body>
 </html>
