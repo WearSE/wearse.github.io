@@ -1,1 +1,1 @@
-Audio Demo (https://wearse.github.io/)
+Audio and video Demo (https://wearse.github.io/)
