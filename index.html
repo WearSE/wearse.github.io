@@ -11,10 +11,15 @@
             flex-direction: column;
             height: 100vh;
             font-family: Arial, sans-serif;
-            margin-top: 370px;
+            margin-top: 1300px;
         }
-        .header-title {
+        .header1-title {
             text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .header2-title {
             font-size: 32px;
             font-weight: bold;
             margin: 20px 0;
@@ -70,11 +75,36 @@
             width: 100%;
             outline: none;
         }
+        .graph-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3列 */
+            gap: 20px; /* 设置列之间的间距 */
+            margin: 20px 0; /* 和其他元素的上下间距 */
+            justify-items: center; /* 水平居中 */
+        }
+
+        .graph-item {
+            text-align: center; /* 图片和标题居中对齐 */
+        }
+
+        .graph-item img {
+            max-width: 300px; /* 图片最大宽度 */
+            height: auto; /* 保持图片比例 */
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .graph-caption {
+            font-size: 14px;
+            margin-top: 10px; /* 标题与图片间距 */
+            color: #555; /* 标题颜色 */
+        }
+
     </style>
 </head>
 <body>
-    <div class="header-title">WearSE Demo</div>
-    <div class="header-subtitle">All source files including video and audio can be found in the audio folder</div>
+    <div class="header1-title">WearSE Demo</div>
     <div class="container">
         <!-- Video Section -->
         <div class="video-container">
@@ -84,192 +114,352 @@
             </video>
         </div>
         
+        <!-- Audio Section -->
+        <div class="header2-title">1) When the noise is speech</div>
+        <!-- Graph Section -->
+        <div class="header-subtitle">The following is an example of the spectrograms for the first set of audio.</div>
+        <div class="graph-container">
+            <div class="graph-item">
+                <img src="picture/speech/signal.png" alt="Graph 1">
+                <div class="graph-caption">Acoustic correlation spectrogram</div>
+            </div>
+            <div class="graph-item">
+                <img src="picture/speech/0.png" alt="Graph 2">
+                <div class="graph-caption">Noise time-frequency spectrogram</div>
+            </div>
+            <div class="graph-item">
+                <img src="picture/speech/0_en.png" alt="Graph 3">
+                <div class="graph-caption">Enhanced time-frequency spectrogram</div>
+            </div>
+        </div>
         <!-- Titles Section -->
         <div class="title-container">
             <div>Ground Truth</div>
             <div>Noise</div>
             <div>WearSE (ours)</div>
         </div>
-        
-        <!-- Audio Section -->
         <div class="audio-container">
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/GroundTruth/1.wav" type="audio/wav">
+                    <source src="audio/speech/label/0.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/1.wav" type="audio/wav">
+                    <source src="audio/speech/noise/0.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/1.wav" type="audio/wav">
+                    <source src="audio/speech/enhance/0.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/GroundTruth/2.wav" type="audio/wav">
+                    <source src="audio/speech/label/1.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/2.wav" type="audio/wav">
+                    <source src="audio/speech/noise/1.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/2.wav" type="audio/wav">
+                    <source src="audio/speech/enhance/1.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/GroundTruth/3.wav" type="audio/wav">
+                    <source src="audio/speech/label/2.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/3.wav" type="audio/wav">
+                    <source src="audio/speech/noise/2.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/3.wav" type="audio/wav">
+                    <source src="audio/speech/enhance/2.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/GroundTruth/4.wav" type="audio/wav">
+                    <source src="audio/speech/label/3.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/4.wav" type="audio/wav">
+                    <source src="audio/speech/noise/3.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/4.wav" type="audio/wav">
+                    <source src="audio/speech/enhance/3.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/GroundTruth/5.wav" type="audio/wav">
+                    <source src="audio/speech/label/4.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/5.wav" type="audio/wav">
+                    <source src="audio/speech/noise/4.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/5.wav" type="audio/wav">
+                    <source src="audio/speech/enhance/4.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
-            <div class="audio-player">
-            <audio controls>
-                <source src="audio/GroundTruth/6.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
+        </div>
+        
+        <!-- Audio Section -->
+        <div class="header2-title">2) When the noise is non-speech</div>
+        <!-- Graph Section -->
+        <div class="header-subtitle">The following is an example of the spectrograms for the first set of audio.</div>
+        <div class="graph-container">
+            <div class="graph-item">
+                <img src="picture/nonSpeech/signal.png" alt="Graph 1">
+                <div class="graph-caption">Acoustic correlation spectrogram</div>
             </div>
+            <div class="graph-item">
+                <img src="picture/nonSpeech/2.png" alt="Graph 2">
+                <div class="graph-caption">Noise time-frequency spectrogram</div>
+            </div>
+            <div class="graph-item">
+                <img src="picture/nonSpeech/2_en.png" alt="Graph 3">
+                <div class="graph-caption">Enhanced time-frequency spectrogram</div>
+            </div>
+        </div>
+        <!-- Titles Section -->
+        <div class="title-container">
+            <div>Ground Truth</div>
+            <div>Noise</div>
+            <div>WearSE (ours)</div>
+        </div>
+        <div class="audio-container">
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/6.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="audio-player">
-                <audio controls>
-                    <source src="audio/WearSE/6.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="audio-player">
-                <audio controls>
-                    <source src="audio/GroundTruth/7.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="audio-player">
-                <audio controls>
-                    <source src="audio/noise/7.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="audio-player">
-                <audio controls>
-                    <source src="audio/WearSE/7.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="audio-player">
-                <audio controls>
-                    <source src="audio/GroundTruth/8.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/label/2.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/8.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/noise/2.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/8.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/enhance/2.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/GroundTruth/9.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/label/4.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/9.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/noise/4.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/9.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div> 
-            <div class="audio-player">
-                <audio controls>
-                    <source src="audio/GroundTruth/10.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/enhance/4.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/noise/10.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/label/8.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-player">
                 <audio controls>
-                    <source src="audio/WearSE/10.wav" type="audio/wav">
+                    <source src="audio/nonSpeech/noise/8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/nonSpeech/enhance/8.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/nonSpeech/label/9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/nonSpeech/noise/9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/nonSpeech/enhance/9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/nonSpeech/label/12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/nonSpeech/noise/12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/nonSpeech/enhance/12.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <!-- Audio Section -->
+        <div class="header2-title">3) When the noise is a mixture of non-speech and speech</div>
+        <!-- Graph Section -->
+        <div class="header-subtitle">The following is an example of the spectrograms for the first set of audio.</div>
+        <div class="graph-container">
+            <div class="graph-item">
+                <img src="picture/mix/signal.png" alt="Graph 1">
+                <div class="graph-caption">Acoustic correlation spectrogram</div>
+            </div>
+            <div class="graph-item">
+                <img src="picture/mix/0.png" alt="Graph 2">
+                <div class="graph-caption">Noise time-frequency spectrogram</div>
+            </div>
+            <div class="graph-item">
+                <img src="picture/mix/0_en.png" alt="Graph 3">
+                <div class="graph-caption">Enhanced time-frequency spectrogram</div>
+            </div>
+        </div>
+        <!-- Titles Section -->
+        <div class="title-container">
+            <div>Ground Truth</div>
+            <div>Noise</div>
+            <div>WearSE (ours)</div>
+        </div>
+        <div class="audio-container">
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/label/0.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/noise/0.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/enhance/0.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/label/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/noise/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/enhance/1.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/label/5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/noise/5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/enhance/5.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/label/6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/noise/6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/enhance/6.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/label/9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/noise/9.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio/mix/enhance/9.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
             </div>
